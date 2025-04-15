@@ -1,9 +1,7 @@
-use std::fmt::DebugList;
-
 use piston_window::*;
 use piston_window::types::Color;
 
-use rand::{rng, Rng,thread_rng};
+use rand::{rng, Rng};
 
 use crate::snake :: {Direction,Snake};
 use crate::draw::{draw_block,draw_rectangle};
@@ -42,7 +40,7 @@ impl Game {
             return;
         }
     
-        let dir = match Key {
+        let dir = match key {
             Key::Up =>Some(Direction::Up),
             Key::Down =>Some(Direction::Down),
             Key::Left =>Some(Direction::Left),
